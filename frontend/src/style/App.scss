@@ -1,0 +1,16 @@
+//import font family
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:wght@400;500&family=PT+Serif&family=Poppins:wght@300;400&family=Roboto+Slab:wght@700&family=Roboto:wght@100;400&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+//import partial file
+@import url(./_login.scss);
+@import url(./_Register.scss);
+@import url(./_Dashboard.scss);
+@import url(./_Navbar.scss);
+@import url(./_DashboardDetails.scss);
+@import url(./_FloweData.scss);
