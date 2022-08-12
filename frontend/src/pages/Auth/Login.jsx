@@ -20,7 +20,7 @@ export default function Login() {
 
   useEffect(() => {
     if (user) {
-      history.push("/dashboard");
+      history.push("/landingpage");
       toast.success(response, {
         position: "top-center",
       });

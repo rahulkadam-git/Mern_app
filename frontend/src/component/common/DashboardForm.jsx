@@ -1,60 +1,38 @@
 import React from "react";
+import { Form, Button } from "react-bootstrap";
 
 export default function DashboardForm(props) {
-  let {
-    Name = "",
-    eCode = "",
-    Surname = "",
-    userType = "",
-  } = props?.userDetails;
+  let { setCompanyName, setLocation, handleSubmit } = props.locationState;
+
   return (
     <div className="userDetails-form">
       <div className="heading">
-        <h1>User details</h1>
+        <h1>Add your location</h1>
       </div>
 
-      <form>
-        <div className="form-group">
-          <label htmlFor="formGroupExampleInput">Name</label>
-          <input
-            className="form-control"
-            id="formGroupExampleInput"
+      <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Company name</Form.Label>
+          <Form.Control
             type="text"
-            placeholder={Name}
-            disabled
-          ></input>
-        </div>
-        <div className="form-group">
-          <label htmlFor="formGroupExampleInput2">Surname</label>
-          <input
-            className="form-control"
-            id="formGroupExampleInput2"
+            placeholder="Enter company"
+            onChange={(e) => setCompanyName(e.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Enter your location</Form.Label>
+          <Form.Control
             type="text"
-            placeholder={Surname}
-            disabled
-          ></input>
-        </div>
-        <div className="form-group">
-          <label htmlFor="formGroupExampleInput3">Ecode</label>
-          <input
-            className="form-control"
-            id="formGroupExampleInput3"
-            type="text"
-            placeholder={eCode}
-            disabled
-          ></input>
-        </div>
-        <div className="form-group">
-          <label htmlFor="formGroupExampleInput4">Usertype</label>
-          <input
-            className="form-control"
-            id="formGroupExampleInput4"
-            type="text"
-            placeholder={userType}
-            disabled
-          ></input>
-        </div>
-      </form>
+            placeholder="Location"
+            onChange={(e) => setLocation(e.target.value)}
+          />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     </div>
   );
 }

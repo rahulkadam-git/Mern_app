@@ -5,10 +5,7 @@ const initialState = {
   user: null,
   error: "",
   response: "",
-  flowerData: null,
-  isLoading: false,
-  userData: null,
-  userDetails: null,
+  location: null,
 };
 
 //reducer
@@ -64,59 +61,7 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         response: "",
       };
-
-    case actionTypes.SHOW_FLOWER_DATA:
-      return {
-        ...state,
-        flowerData: payload,
-        isLoading: false,
-      };
-    case actionTypes.FLOWER_ERROR:
-      return {
-        ...state,
-        error: payload,
-        isLoading: false,
-      };
-    case actionTypes.FLOWER_DATA_LOADING:
-      return {
-        ...state,
-        isLoading: true,
-      };
-    case actionTypes.GET_ALL_USER:
-      return {
-        ...state,
-        userData: payload,
-        isLoading: false,
-      };
-    case actionTypes.GET_ALL_USER_FAILED:
-      return {
-        ...state,
-        error: payload,
-        isLoading: false,
-      };
-    case actionTypes.GET_USER_DATA_LOADING:
-      return {
-        ...state,
-        isLoading: true,
-      };
-    case actionTypes.GET_USER_DETAILS:
-      return {
-        ...state,
-        userDetails: payload,
-        isLoading: false,
-      };
-    case actionTypes.GET_USER_DETAILS_ERROR:
-      return {
-        ...state,
-        error: payload,
-        isLoading: false,
-      };
-    case actionTypes.GET_USER_DETAILS_LOADING:
-      return {
-        ...state,
-        isLoading: true,
-      };
-
+   
     default:
       return state;
   }

@@ -3,9 +3,13 @@ const mongoose = require("mongoose");
 const dbConnection = async () => {
   try {
     //mongodb connection
-    const con = await mongoose.connect("mongodb+srv://user_31:user31@cluster0.ijzwi.mongodb.net/testing?retryWrites=true&w=majority", {
-      useNewUrlParser: true, useUnifiedTopology: true 
-    });
+    const con = await mongoose.connect(
+      "mongodb+srv://user_31:user31@cluster0.ijzwi.mongodb.net/cars_detection?retryWrites=true&w=majority",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
 
     console.log(`Mongodb connected ${con.connection.host}`);
   } catch (error) {
