@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import Datetime from "react-datetime";
-
+import DatePicker from "react-datepicker";
 
 function CreateAppoinments(props) {
   const [show, setShow] = useState(false);
@@ -39,7 +38,7 @@ function CreateAppoinments(props) {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Date</Form.Label>
             <Form.Label>Date</Form.Label>
-            <Datetime />
+            <DatePicker />
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>

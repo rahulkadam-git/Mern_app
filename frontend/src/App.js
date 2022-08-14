@@ -11,7 +11,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store/store";
 import { ToastContainer } from "react-toastify";
-import "react-datetime/css/react-datetime.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 import LandingPage from "./pages/Dashboard/LandingPage";
 
